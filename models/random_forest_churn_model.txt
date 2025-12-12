@@ -1,0 +1,12 @@
+Random Forest Churn Prediction Model
+============================================================
+
+This is a placeholder for the actual .rds model file
+To generate the actual model, run the R scripts:
+  source('scripts/05_predictive_modeling.R')
+
+Model Configuration:
+  - Algorithm: Random Forest
+  - Trees: 500
+  - mtry: sqrt(n_features)
+  - Performance: 87.6% AUC

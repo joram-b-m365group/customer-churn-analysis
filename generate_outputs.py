@@ -75,8 +75,8 @@ data = data.drop('churn_prob', axis=1)
 data.to_csv('data/customer_churn_data.csv', index=False)
 data.to_csv('data/customer_churn_clean.csv', index=False)
 
-print(f"  ✓ Generated {n_customers} customer records")
-print(f"  ✓ Churn rate: {(data['churn'] == 'Yes').mean() * 100:.2f}%")
+print(f"  OK Generated {n_customers} customer records")
+print(f"  OK Churn rate: {(data['churn'] == 'Yes').mean() * 100:.2f}%")
 
 # ============================================================================
 # 2. Generate Visualizations
@@ -103,7 +103,7 @@ ax.set_ylim(0, max(churn_counts.values) * 1.15)
 plt.tight_layout()
 plt.savefig('outputs/01_churn_distribution.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ 01_churn_distribution.png")
+print("  OK 01_churn_distribution.png")
 
 # 2. Churn by Contract Type
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -117,7 +117,7 @@ ax.legend(title='Churn', loc='upper right')
 plt.tight_layout()
 plt.savefig('outputs/02_churn_by_contract.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ 02_churn_by_contract.png")
+print("  OK 02_churn_by_contract.png")
 
 # 3. Tenure Distribution by Churn
 fig, axes = plt.subplots(2, 1, figsize=(10, 8))
@@ -132,7 +132,7 @@ plt.suptitle('Customer Tenure Distribution by Churn Status', fontsize=14, fontwe
 plt.tight_layout()
 plt.savefig('outputs/03_tenure_distribution.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ 03_tenure_distribution.png")
+print("  OK 03_tenure_distribution.png")
 
 # 4. Monthly Charges vs Churn
 fig, ax = plt.subplots(figsize=(8, 6))
@@ -152,7 +152,7 @@ ax.grid(True, alpha=0.3, axis='y')
 plt.tight_layout()
 plt.savefig('outputs/04_monthly_charges_churn.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ 04_monthly_charges_churn.png")
+print("  OK 04_monthly_charges_churn.png")
 
 # 5. Tenure and Contract Interaction
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -170,7 +170,7 @@ ax.grid(True, alpha=0.3, axis='y')
 plt.tight_layout()
 plt.savefig('outputs/05_tenure_contract_interaction.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ 05_tenure_contract_interaction.png")
+print("  OK 05_tenure_contract_interaction.png")
 
 # 6. Customer Satisfaction Impact
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -186,7 +186,7 @@ ax.legend(title='Churn', loc='upper right')
 plt.tight_layout()
 plt.savefig('outputs/06_satisfaction_churn.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ 06_satisfaction_churn.png")
+print("  OK 06_satisfaction_churn.png")
 
 # 7. Payment Method Analysis
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -202,7 +202,7 @@ ax.grid(True, alpha=0.3, axis='x')
 plt.tight_layout()
 plt.savefig('outputs/07_payment_method_churn.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ 07_payment_method_churn.png")
+print("  OK 07_payment_method_churn.png")
 
 # 8. Support Tickets Impact
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -217,7 +217,7 @@ ax.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.savefig('outputs/08_support_tickets_churn.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ 08_support_tickets_churn.png")
+print("  OK 08_support_tickets_churn.png")
 
 # 9. Comprehensive Dashboard
 fig = plt.figure(figsize=(12, 10))
@@ -260,7 +260,7 @@ plt.suptitle('Customer Churn Analysis Dashboard', fontsize=16, fontweight='bold'
 
 plt.savefig('outputs/09_dashboard.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ 09_dashboard.png")
+print("  OK 09_dashboard.png")
 
 # 10. Correlation Matrix
 fig, ax = plt.subplots(figsize=(10, 8))
@@ -281,7 +281,7 @@ ax.set_title('Feature Correlation Matrix', fontsize=14, fontweight='bold', pad=2
 plt.tight_layout()
 plt.savefig('outputs/correlation_matrix.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ correlation_matrix.png")
+print("  OK correlation_matrix.png")
 
 # 11. Feature Importance (simulated)
 fig, ax = plt.subplots(figsize=(10, 8))
@@ -298,7 +298,7 @@ ax.grid(True, alpha=0.3, axis='x')
 plt.tight_layout()
 plt.savefig('outputs/feature_importance.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ feature_importance.png")
+print("  OK feature_importance.png")
 
 # 12. ROC Curves
 fig, ax = plt.subplots(figsize=(10, 8))
@@ -328,7 +328,7 @@ ax.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.savefig('outputs/roc_curves.png', dpi=300, bbox_inches='tight')
 plt.close()
-print("  ✓ roc_curves.png")
+print("  OK roc_curves.png")
 
 # ============================================================================
 # 3. Generate Summary Statistics
@@ -349,7 +349,7 @@ summary_stats['count'] = data.groupby('churn').size()
 summary_stats = summary_stats[['count', 'age', 'tenure_months', 'monthly_charges',
                                 'total_charges', 'support_tickets', 'customer_satisfaction']]
 summary_stats.to_csv('outputs/churn_summary_statistics.csv')
-print("  ✓ churn_summary_statistics.csv")
+print("  OK churn_summary_statistics.csv")
 
 # Model comparison
 model_comparison = pd.DataFrame({
@@ -361,7 +361,7 @@ model_comparison = pd.DataFrame({
     'AUC': [0.8510, 0.8760, 0.8540]
 })
 model_comparison.to_csv('outputs/model_comparison.csv', index=False)
-print("  ✓ model_comparison.csv")
+print("  OK model_comparison.csv")
 
 # ============================================================================
 # 4. Create Model Metadata
@@ -391,7 +391,7 @@ with open('models/model_metadata.txt', 'w') as f:
     f.write("  4. customer_satisfaction\n")
     f.write("  5. total_charges\n")
 
-print("  ✓ model_metadata.txt")
+print("  OK model_metadata.txt")
 
 with open('models/random_forest_churn_model.txt', 'w') as f:
     f.write("Random Forest Churn Prediction Model\n")
@@ -405,14 +405,14 @@ with open('models/random_forest_churn_model.txt', 'w') as f:
     f.write("  - mtry: sqrt(n_features)\n")
     f.write("  - Performance: 87.6% AUC\n")
 
-print("  ✓ random_forest_churn_model.txt (placeholder)")
+print("  OK random_forest_churn_model.txt (placeholder)")
 
 # ============================================================================
 # Summary
 # ============================================================================
 
 print("\n" + "=" * 60)
-print("✓ OUTPUT GENERATION COMPLETE!")
+print("OK OUTPUT GENERATION COMPLETE!")
 print("=" * 60)
 print(f"\nGenerated Files:")
 print(f"  Data files: 2")

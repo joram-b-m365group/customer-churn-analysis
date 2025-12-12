@@ -1,4 +1,4 @@
 Model,Accuracy,Precision,Recall,F1_Score,AUC
-Logistic Regression,0.7980,0.7380,0.6650,0.6990,0.8510
-Random Forest,0.8250,0.7810,0.6920,0.7340,0.8760
-LASSO,0.8010,0.7450,0.6710,0.7060,0.8540
+Logistic Regression,0.798,0.738,0.665,0.699,0.851
+Random Forest,0.825,0.781,0.692,0.734,0.876
+LASSO,0.801,0.745,0.671,0.706,0.854

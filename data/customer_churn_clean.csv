@@ -1,0 +1,11 @@
+customer_id,age,gender,tenure_months,contract_type,monthly_charges,total_charges,internet_service,online_security,tech_support,streaming_tv,payment_method,paperless_billing,support_tickets,customer_satisfaction,signup_date,churn
+CUST00001,52,Male,24,Month-to-month,85.50,2052.00,Fiber optic,No,Yes,Yes,Electronic check,Yes,3,2.8,2022-03-15,Yes
+CUST00002,45,Female,48,Two year,62.30,2990.40,DSL,Yes,Yes,No,Credit card,Yes,1,4.2,2021-01-10,No
+CUST00003,38,Male,12,One year,95.20,1142.40,Fiber optic,No,No,Yes,Bank transfer,No,5,1.9,2023-06-01,Yes
+CUST00004,61,Female,72,Two year,45.80,3297.60,DSL,Yes,Yes,Yes,Mailed check,No,0,4.8,2019-08-20,No
+CUST00005,29,Male,6,Month-to-month,105.00,630.00,Fiber optic,No,No,No,Electronic check,Yes,7,1.5,2024-01-05,Yes
+CUST00006,55,Female,36,One year,71.50,2574.00,DSL,Yes,No,Yes,Credit card,Yes,2,3.5,2021-12-15,No
+CUST00007,42,Male,18,Month-to-month,88.90,1600.20,Fiber optic,No,Yes,No,Electronic check,Yes,4,2.3,2023-02-28,Yes
+CUST00008,67,Female,60,Two year,52.40,3144.00,DSL,Yes,Yes,Yes,Bank transfer,No,1,4.5,2020-05-10,No
+CUST00009,33,Other,9,Month-to-month,98.70,888.30,Fiber optic,No,No,Yes,Electronic check,Yes,6,1.8,2023-10-01,Yes
+CUST00010,49,Male,30,One year,67.80,2034.00,DSL,Yes,Yes,No,Credit card,Yes,2,3.8,2022-06-15,No
